@@ -151,6 +151,15 @@ void typeText(string text){
 	}
 }
 
+int getRand(int rangeMin, int rangeMax){
+	return (int)floor(rand() / (RAND_MAX + 1.0) * ((rangeMax - rangeMin) + 1) + rangeMin);
+}
+
+int quit(){
+	cout << vertSpcPadding; system("pause");
+	return 0;
+}
+
 
 
 
