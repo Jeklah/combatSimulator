@@ -1,12 +1,13 @@
 #pragma once
 
 #include "stdafx.h"
-#include "inventory.h"
 #include <iostream>
+#include "inventory.h"
 
 using namespace std;
-//Check inventory.h for comments, they are similar here.
-class player{
+//Check inventory.h for comments. pretty much the same.
+class player
+{
 	private:
 		int health;
 		int intelligence;
@@ -17,7 +18,7 @@ class player{
 		string name;
 		int armour;
 		
-
+		
 	public:
 		player();
 		player(string name, int startStr, int startAgi, int startInt);
@@ -32,7 +33,8 @@ class player{
 		int getLvl();
 		int getXP();
 		int getArmour();
+		//playing around with pointers. i can not remember at all at the moment.
 		inventory *playersInv;
-		void createInv(itemTable* itemsTable_, int invSize_);
+		void createInv(ItemTable* itemsTable_, int invSize_);
 		int getInvSize();
 };

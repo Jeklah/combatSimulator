@@ -1,15 +1,14 @@
+#include "stdafx.h"
+#include <iostream>
 #ifndef SHOP_H
 #define SHOP_H
-
-#include "stdafx.h"
 #include "item.h"
 #include "inventory.h"
-#include <iostream>
-
+//Check inventory.h for comments. pretty much the same./ lol this is way ahead of where i am at the moment...disregard for now!
 using namespace std;
 
-class shop{
-	
+class shop
+{
 	private:
 		int shopGold;
 		inventory bag;
@@ -19,6 +18,14 @@ class shop{
 		void fillBag();
 		item sellItem();
 		void buyItem();
+
+
+
+
+
+
+
+
 
 };
 #endif

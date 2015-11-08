@@ -1,13 +1,12 @@
 #include "stdafx.h"
 #include "player.h"
 #include "inventory.h"
-
 #include <iostream>
-
 using namespace std;
 
-//Creating the player.
 
+//Creating the player. did have more inventory if stronger but it caused problems so
+//yeah.
 player::player(string name, int startStr, int startAgi, int startInt):
 	name(name),
 	strength(startStr),
@@ -16,56 +15,97 @@ player::player(string name, int startStr, int startAgi, int startInt):
 {
 	lvl = 0;
 	xp = 0;
+	
+	/*if (strength > 15)
+		playersInventory = new inventory(50);
+	else
+		playersInventory = new inventory(30);*/
+
 }
 
-void player::attack(){
-	count << "\nI'm attacking! To War! I do " << (strength * 2) / 2 endl;
+void player::attack()
+{
+	cout << "\nI'm attacking! Rawwwr. I do " << (strength * 2) /2 << endl;
 }
 
-int player::heal(){
-	cout << "\nI'm healing, cover me!";
+int player::heal()
+{
+	cout << "\n I'm healing, watch my back!";
 	return (intelligence /2) +3;
 }
 
-int player::gainXP(){
-	return (lvl + 1) / 5;
+int player::gainXP()
+{
+	return (lvl /10);
 }
 
-string player::getName(){
+string player::getName()
+{
 	return name;
 }
 
-int player::getHP(){
+int player::getHP()
+{
 	return health;
 }
 
-int player::getInt(){
+int player::getInt()
+{
 	return intelligence;
 }
 
-int player::getAgi(){
+int player::getAgi()
+{
 	return agility;
 }
 
-int player::getStr{
+int player::getStr()
+{
 	return strength;
 }
 
-int player::getLvl(){
+int player::getLvl()
+{
 	return lvl;
 }
 
-int player::getArmour(){
+int player::getArmour()
+{
 	return armour;
 }
 
-int player::getInvSize(){
+int player::getInvSize()
+{
 	return playersInv->getSize();
 }
 
-void player::createInv(itemTable* itemsTable_, int invSize_){
+void player::createInv(ItemTable* itemsTable_, int invSize_)
+{
 	playersInv = new inventory(itemsTable_, invSize_);
-}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
