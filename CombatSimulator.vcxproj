@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="globals.h" />
     <ClInclude Include="inventory.h" />
     <ClInclude Include="item.h" />
     <ClInclude Include="ItemTable.h" />
@@ -20,7 +21,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Combat Simulator.cpp" />
+    <ClCompile Include="CombatSimulator.cpp" />
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="ItemTable.cpp" />

@@ -1,3 +1,4 @@
+#pragma once
 #include "ItemTable.h"
 #include "item.h"
 #include <string>

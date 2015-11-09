@@ -1,13 +1,11 @@
-﻿Build started 07/11/2015 17:43:29.
+﻿Build started 08/11/2015 06:29:11.
      1>Project "E:\Code\MyCombatSimulator\CombatSimulator.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Utilities\Visual Studio 2015\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt "Combat Simulator.cpp" inventory.cpp
-         inventory.cpp
-         Combat Simulator.cpp
-         Generating Code...
-     1>e:\code\mycombatsimulator\combat simulator.cpp(112): warning C4715: 'createCharacter': not all control paths return a value
+         D:\Utilities\Visual Studio 2015\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt CombatSimulator.cpp
+         CombatSimulator.cpp
+     1>e:\code\mycombatsimulator\combatsimulator.cpp(124): warning C4715: 'createCharacter': not all control paths return a value
        Link:
-         D:\Utilities\Visual Studio 2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Code\MyCombatSimulator\Debug\CombatSimulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Code\MyCombatSimulator\Debug\CombatSimulator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Code\MyCombatSimulator\Debug\CombatSimulator.lib" /MACHINE:X86 "Debug\Combat Simulator.obj"
+         D:\Utilities\Visual Studio 2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Code\MyCombatSimulator\Debug\CombatSimulator.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Code\MyCombatSimulator\Debug\CombatSimulator.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Code\MyCombatSimulator\Debug\CombatSimulator.lib" /MACHINE:X86 Debug\CombatSimulator.obj
          Debug\inventory.obj
          Debug\item.obj
          Debug\ItemTable.obj
@@ -18,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.95
+Time Elapsed 00:00:01.13

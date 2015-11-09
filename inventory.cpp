@@ -1,3 +1,4 @@
+#pragma once
 #include "stdafx.h"
 #include <iostream>
 #include "inventory.h"
@@ -5,6 +6,8 @@
 #include <string>
 #include "item.h"
 #include "ItemTable.h"
+
+
 using namespace std;
 //same as the item class, definging the class inventory, although I wasn't quite sure
 //how to go about it. I tried array but it didn't work cos you couldn't increase the size
@@ -41,17 +44,19 @@ int inventory::getFreeSize() {
 
 
 void inventory::printItem(std::ostream& stream_, int id_) {
+
 	int id = id_;
 	int mainSt = itemTable->getItem(id)->getMainStat();
 	int offSt = itemTable->getItem(id)->getOffStat();
 	int minorSt = itemTable->getItem(id)->getMinorStat();
 	string itemName = itemTable->getItem(id)->getName();
+	std::string vertSpcPadding = "               ";
 
-	stream_ << "Name:\t" << itemName;
-	stream_ << "Id:\t" << id;
-	stream_ << "MainStat:\t" << mainSt;
-	stream_ << "OffStat:\t" << offSt;
-	stream_ << "MinorStat:\t" << minorSt;
+	stream_ << "Name      : " << itemName << '\n';
+	stream_ << vertSpcPadding << "Id        : " << id << '\n';
+	stream_ << vertSpcPadding << "MainStat  : " << mainSt << '\n';
+	stream_ << vertSpcPadding << "OffStat   : " << offSt << '\n';
+	stream_ << vertSpcPadding << "MinorStat : " << minorSt << '\n';
 	stream_ << std::endl;
 }
 
