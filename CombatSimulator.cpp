@@ -14,6 +14,7 @@
 #include "inventory.h"
 #include "globals.h"
 #include "stdlib.h"
+#include <locale>
 
 
 
@@ -26,7 +27,7 @@ void welcome();
 int quit();
 int classChoose();
 int getRand(int rangeMin, int rangeMax);
-player* createCharacter(int classChoice);
+player* createPlayer(int classChoice);
 void typeText(string text);
 //declaring the function testing creating an item to see if i could add to inv..
 item* createTestItem()
@@ -58,7 +59,7 @@ int main()
 	classChoice = classChoose();  //deciding class
 
 	
-	playersChar =  createCharacter(classChoice);  //create character of chosen class
+	playersChar =  createPlayer(classChoice);  //create character of chosen class
 	cout <<  vertSpcPadding << "Hello, I am name is " << playersChar->getName() << endl; //check character was created
 
 	playersChar->createInv(&itemsTable, 30);
@@ -78,20 +79,22 @@ int main()
 	playersInv.printItem(std::cout, 0);
 
 	cout << vertSpcPadding;
-	typeText(" Your story begins...");
+	typeText("Your story begins...");
 	Sleep(50);
 	system("CLS");
-	cout << vertSpcPadding;
-	cout << vertSpcPadding;
-	cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east, the other leading west. /n" << "Which way do you want to go?";
+	cout << "\n\n";
+	cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east, the other leading west. \n" << "Which way do you want to go? \n";
 	cin >> pathChoice;
+	if (pathChoice == "west") {
+		cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an imp jumps out!";
+	}
 	
 	quit();
 }
 
 
 //declaring creating the character 
-player* createCharacter(int classChoice)
+player* createPlayer(int classChoice)
 {
 	string name;
 	int startingStr;
@@ -123,7 +126,7 @@ player* createCharacter(int classChoice)
 		case 3:
 			{
 				cout << vertSpcPadding << "You chose the Wizard.\n";
-				cout << vertSpcPadding <<  "What would you like to call your character?: ";
+				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				playersChar = new player(name, startingStr = getRand(1,10),startingAgi = getRand(1,10),startingInt = getRand(7, 20));
 				return playersChar;
@@ -133,7 +136,7 @@ player* createCharacter(int classChoice)
 	
 }
 
-string directionChoice(string pathChoice) {
+string directionChoice(int pathChoice) {
 	string path;
 	//writr a function to turn words into numbers for switch cases. switch accepts ints not strings.
 	
@@ -146,7 +149,9 @@ string directionChoice(string pathChoice) {
 		}
 		break;
 		case 2: {
-
+			cout << "The west path. There is a dark path but a faint light at the end...";
+			cin >> path;
+			return path;
 		}
 	}
 
@@ -201,6 +206,7 @@ int getRand(int rangeMin, int rangeMax)
 {
     return (int)floor(rand() / (RAND_MAX + 1.0) * ((rangeMax - rangeMin) + 1) + rangeMin);
 }
+
 
 
 

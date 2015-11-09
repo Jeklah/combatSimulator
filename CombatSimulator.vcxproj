@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="enemyTable.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="inventory.h" />
     <ClInclude Include="item.h" />
