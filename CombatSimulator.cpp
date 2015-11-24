@@ -90,7 +90,12 @@ int main()
 	//typeText("this is a test"); works  //this. is special. this is a nice little function that prints out charaters slowly. its cool.
 
 	testItem = itemsTable.getItem(0);
+	newEnemy = enemysTable.getEnemy(0);
+
 	
+	newEnemy->getHP();
+ 
+
 	cout << vertSpcPadding;
 	playersInv.addItem(0);
 	playersInv.printItem(std::cout, 0);
@@ -103,10 +108,10 @@ int main()
 	cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east with a faint light along it, the other is a dark, black path leading west. \n" << "Which way do you want to go? \n";
 	cin >> pathChoice;
 	if (pathChoice == "west") {
-		cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an imp jumps out!";
+		cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << newEnemy->getName() <<" jumps out!";
 	}
 	else {
-		cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an Imp!";
+		cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an ";
 	}
 	
 	quit();

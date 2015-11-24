@@ -20,7 +20,7 @@ class enemy
 
 	public:
 		enemy(string name, int str, int def, int hp, int diff, int enemyID);
-		void getName();
+		string getName();
 		int attack(int defence);
 		int getHP();
 		void defend(int attacker);

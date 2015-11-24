@@ -18,8 +18,8 @@ enemy::enemy(string name, int str, int def, int hp, int diff, int enemyID) :
 {
 }
 
-void enemy::getName() {
-	cout << name;
+string enemy::getName() {
+	return name;
 }
 
 int enemy::getHP() {
