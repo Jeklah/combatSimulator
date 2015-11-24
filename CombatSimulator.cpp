@@ -17,6 +17,7 @@
 #include <locale>
 #include "enemy.h"
 #include "enemyTable.h"
+#include "fight.h"
 
 
 
@@ -63,6 +64,7 @@ int main()
 	player* playersChar;
 	inventory playersInv(&itemsTable, 30);
 	string pathChoice;
+	fight* newFight;
 
 	item* testItem = createTestItem();
 	itemsTable.addItem(createTestItem());
@@ -109,6 +111,8 @@ int main()
 	cin >> pathChoice;
 	if (pathChoice == "west") {
 		cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << newEnemy->getName() <<" jumps out!";
+		newFight = new fight(playersChar, newEnemy);
+		newFight->beginFight();
 	}
 	else {
 		cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an ";
