@@ -24,6 +24,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CombatSimulator.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="enemyTable.cpp" />
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="item.cpp" />
     <ClCompile Include="ItemTable.cpp" />

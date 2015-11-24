@@ -15,6 +15,8 @@
 #include "globals.h"
 #include "stdlib.h"
 #include <locale>
+#include "enemy.h"
+#include "enemyTable.h"
 
 
 
@@ -41,10 +43,22 @@ item* createTestItem()
 
 	return new item(name, id, weight, mainStat, offStat, minorStat);
 }
+
+enemy* createEnemy() {
+	string name = "Imp";
+	int str = 2;
+	int def = 1;
+	int hp = 3;
+	int diffclty = 1;
+	int ID = 0;
+
+	return new enemy(name, str, def, hp, diffclty, ID);
+}
 //from now on it all it worked.
 int main()
 {
 	ItemTable itemsTable;
+	enemyTable enemysTable;
 	string path;
 	player* playersChar;
 	inventory playersInv(&itemsTable, 30);
@@ -52,6 +66,9 @@ int main()
 
 	item* testItem = createTestItem();
 	itemsTable.addItem(createTestItem());
+
+	enemy* newEnemy = createEnemy();
+	enemysTable.addEnemy(newEnemy);
 
 	welcome();  //welcome screen. see welcome declaration
 
@@ -83,10 +100,13 @@ int main()
 	Sleep(50);
 	system("CLS");
 	cout << "\n\n";
-	cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east, the other leading west. \n" << "Which way do you want to go? \n";
+	cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east with a faint light along it, the other is a dark, black path leading west. \n" << "Which way do you want to go? \n";
 	cin >> pathChoice;
 	if (pathChoice == "west") {
 		cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an imp jumps out!";
+	}
+	else {
+		cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an Imp!";
 	}
 	
 	quit();
@@ -207,21 +227,10 @@ int getRand(int rangeMin, int rangeMax)
     return (int)floor(rand() / (RAND_MAX + 1.0) * ((rangeMax - rangeMin) + 1) + rangeMin);
 }
 
-
-
-
-// This doesn't quit...it waits for user input!
 int quit()
 {
-	//cout << "Press any key to quit" << endl;
+	cout << "\n";
 	getchar();
 	system("pause");
 	return 0;
-	
-	/*char f;
-	cin >> f;
-	if (f == f)
-		return 0;
-	
-	return 0;*/
 }
