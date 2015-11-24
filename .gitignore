@@ -1,0 +1,15 @@
+Debug/*.*
+*.suo
+*.obj
+*.exe
+*.log
+*.idb
+*.pdb
+*.tlog
+*.ilk
+*.filters
+*.vcxproj
+*.sdf
+*.un~
+*.un
+*.opensdf
