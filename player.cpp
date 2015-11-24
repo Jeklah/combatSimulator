@@ -84,6 +84,26 @@ void player::createInv(ItemTable* itemsTable_, int invSize_)
 	playersInv = new inventory(itemsTable_, invSize_);
 }
 
+void player::setClass(int classChoice) {
+	switch (classChoice) {
+		case 1:
+		{
+			clss = "Warrior";
+		}
+		break;
+		case 2:
+		{
+			clss = "Ranger";
+		}
+		break;
+		case 3:
+		{
+			clss = "Wizard";
+		}
+		break;
+	}
+		
+}
 
 
 

@@ -9,6 +9,7 @@ using namespace std;
 class player
 {
 	private:
+		string clss;
 		int health;
 		int intelligence;
 		int strength;
@@ -37,4 +38,5 @@ class player
 		inventory *playersInv;
 		void createInv(ItemTable* itemsTable_, int invSize_);
 		int getInvSize();
+		void setClass(int classChoice);
 };

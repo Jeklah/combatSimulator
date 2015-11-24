@@ -10,5 +10,8 @@ fight::fight(player* defendant, enemy* attacker) :
 {}
 
 void fight::beginFight() {
-	cout << defendant->getName() << "test";
+	cout << "\n" << defendant->getName() << " is about to fight " << attacker->getName();
+	while (defendant->getHP() != 0 | attacker->getHP() != 0) {
+	
+	}
 }
