@@ -250,3 +250,5 @@ FakesAssemblies/
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
 Debug/
+*.vcxproj
+*.vcxproj.filters
