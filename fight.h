@@ -14,7 +14,10 @@ class fight
 {
 
 	public:
+		player* defendant;
+		enemy* attacker;
 		fight(player*, enemy*);
+		void beginFight();
 
 };
 
