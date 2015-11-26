@@ -1,8 +1,6 @@
 // Combat Simulator.cpp : Defines the entry point for the console application.
 //
 #pragma once
-
-	
 #include "stdafx.h"
 #include <iostream>
 #include "player.h"
@@ -19,11 +17,7 @@
 #include "enemyTable.h"
 #include "fight.h"
 
-
-
 using namespace std;
-//spacing to make a box around the welcome screen.
-
 
 //defining the functions
 void welcome();

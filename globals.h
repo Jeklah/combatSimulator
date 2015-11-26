@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "stdafx.h"
+//spacing to make a box around the welcome screen.
 extern const std::string vertSpcPadding = "               ";
 extern const std::string horiSpcPadding = "                                                   ";
 extern const std::string header = "======================================================================================================================";
