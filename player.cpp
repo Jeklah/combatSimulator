@@ -15,6 +15,7 @@ player::player(string name, int startStr, int startAgi, int startInt):
 {
 	lvl = 0;
 	xp = 0;
+	//attackDmg = 0;
 	
 	/*if (strength > 15)
 		playersInventory = new inventory(50);
@@ -69,9 +70,9 @@ int player::getLvl()
 	return lvl;
 }
 
-int player::getArmour()
+int player::getDef()
 {
-	return armour;
+	return def;
 }
 
 int player::getInvSize()
@@ -89,22 +90,28 @@ void player::setClass(int classChoice) {
 		case 1:
 		{
 			clss = "Warrior";
+			clssID = 1;
 		}
 		break;
 		case 2:
 		{
 			clss = "Ranger";
+			clssID = 2;
 		}
 		break;
 		case 3:
 		{
 			clss = "Wizard";
+			clssID = 3;
 		}
 		break;
 	}
 		
 }
 
+int player::getClassID() {
+	return clssID;
+}
 
 
 

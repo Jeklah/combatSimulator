@@ -25,6 +25,9 @@ class enemy
 		int getHP();
 		void defend(int attacker);
 		double giveXP();
+		int getDiff();
+		int getStr();
+		int getDef();
 	
 };
 

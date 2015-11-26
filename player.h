@@ -17,7 +17,8 @@ class player
 		int lvl;
 		int xp;
 		string name;
-		int armour;
+		int def;
+		int clssID;
 		
 		
 	public:
@@ -33,10 +34,12 @@ class player
 		int getStr();
 		int getLvl();
 		int getXP();
-		int getArmour();
+		int getDef();
 		//playing around with pointers. i can not remember at all at the moment.
 		inventory *playersInv;
 		void createInv(ItemTable* itemsTable_, int invSize_);
 		int getInvSize();
 		void setClass(int classChoice);
+		int getClassID();
+		int getAtt();
 };

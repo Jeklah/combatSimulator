@@ -24,7 +24,7 @@
 using namespace std;
 //spacing to make a box around the welcome screen.
 
-extern const string horiSpcPadding = "                                                   ";
+
 //defining the functions
 void welcome();
 int quit();
@@ -65,7 +65,7 @@ int main()
 	inventory playersInv(&itemsTable, 30);
 	string pathChoice;
 	fight* newFight;
-
+	string rdy;
 	item* testItem = createTestItem();
 	itemsTable.addItem(createTestItem());
 
@@ -103,22 +103,32 @@ int main()
 	playersInv.printItem(std::cout, 0);
 
 	cout << vertSpcPadding;
-	typeText("Your story begins...");
-	Sleep(50);
-	system("CLS");
-	cout << "\n\n";
-	cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east with a faint light along it, the other is a dark, black path leading west. \n" << "Which way do you want to go? \n";
-	cin >> pathChoice;
-	if (pathChoice == "west") {
-		cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << newEnemy->getName() <<" jumps out!";
-		newFight = new fight(playersChar, newEnemy);
-		newFight->beginFight();
-	}
-	else {
-		cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an ";
-	}
+	cout << "Are you sitting comfortably? y/n ";
+	cin >> rdy;
 	
-	quit();
+	if (rdy == "y") {
+		cout << vertSpcPadding << "Then I'll begin.\n";
+		Sleep(20);
+		cout << vertSpcPadding;
+		typeText("Your story begins...");
+		Sleep(1800);
+		system("CLS");
+		cout << header << "\n";
+		cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east with a faint light along it, the other is a dark, black path leading west. \n" << "Which way do you want to go? \n";
+		cin >> pathChoice;
+		if (pathChoice == "west") {
+			cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << newEnemy->getName() << " jumps out!";
+			newFight = new fight(playersChar, newEnemy);
+			newFight->beginFight();
+		}
+		else {
+			cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an ";
+		}
+
+		quit();
+	}
+
+	
 }
 
 
@@ -136,7 +146,7 @@ player* createPlayer(int classChoice)
 	{
 		case 1:
 			{
-				cout << vertSpcPadding <<  "You have chosen the Warrior.\n";
+				cout << vertSpcPadding << "You have chosen the Warrior.\n";
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				playersChar = new player(name, startingStr = getRand(7,20),startingAgi = getRand(1,10),startingInt = getRand(1, 10));
@@ -219,22 +229,8 @@ void welcome()
 	cout << endl;
 }
 
-//the nice little function that prints out strings character by character.
-void typeText(string text)
-{
-	for (size_t i = 0; i < text.size(); ++i)
-	{
-		cout << text[i] << flush;
-		Sleep(100);
-		
-	}
-}
 
-//random numbers for random stats for the character stats.
-int getRand(int rangeMin, int rangeMax)
-{
-    return (int)floor(rand() / (RAND_MAX + 1.0) * ((rangeMax - rangeMin) + 1) + rangeMin);
-}
+
 
 int quit()
 {

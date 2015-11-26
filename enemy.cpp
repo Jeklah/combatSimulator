@@ -44,3 +44,15 @@ void enemy::defend(int attacker) {
 	}
 
 }
+
+int enemy::getDiff() {
+	return diffclty;
+}
+
+int enemy::getStr() {
+	return str;
+}
+
+int enemy::getDef() {
+	return def;
+}

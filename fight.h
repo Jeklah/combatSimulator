@@ -18,6 +18,11 @@ class fight
 		enemy* attacker;
 		fight(player*, enemy*);
 		void beginFight();
+		void fighting(int attDmg, int attArmr, int defDmg, int defArmr);
+		int defDmg;
+		int attDmg;
+		int defArmr;
+		int attArmr;
 
 };
 
