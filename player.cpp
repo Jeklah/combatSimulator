@@ -15,6 +15,7 @@ player::player(string name, int startStr, int startAgi, int startInt):
 {
 	lvl = 0;
 	xp = 0;
+	health = strength / 2;
 	//attackDmg = 0;
 	
 	/*if (strength > 15)
@@ -24,9 +25,26 @@ player::player(string name, int startStr, int startAgi, int startInt):
 
 }
 
-void player::attack()
-{
-	cout << "\nI'm attacking! Rawwwr. I do " << (strength * 2) /2 << endl;
+int player::getAtt() {
+	switch (clssID) {
+		case 1:
+		{
+			return (strength / 2) + 3;
+		}
+		break;
+		case 2:
+		{
+			return (agility/ 2) + 3;
+		}
+		break;
+		case 3:
+		{
+			return (intelligence / 2) + 3;
+		}
+		break;
+		default:
+			break;
+	}
 }
 
 int player::heal()

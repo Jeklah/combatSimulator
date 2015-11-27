@@ -114,6 +114,7 @@ int main()
 			cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << newEnemy->getName() << " jumps out!";
 			newFight = new fight(playersChar, newEnemy);
 			newFight->beginFight();
+			newFight->fighting();
 		}
 		else {
 			cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an ";
@@ -144,6 +145,7 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				playersChar = new player(name, startingStr = getRand(7,20),startingAgi = getRand(1,10),startingInt = getRand(1, 10));
+				playersChar->setClass(classChoice);
 				return playersChar;
 			}
 			break;
@@ -153,6 +155,7 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				playersChar = new player(name, startingStr = getRand(1,10),startingAgi = getRand(7,20),startingInt = getRand(1, 10));
+				playersChar->setClass(classChoice);
 				return playersChar;
 			}
 			break;
@@ -162,6 +165,7 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				playersChar = new player(name, startingStr = getRand(1,10),startingAgi = getRand(1,10),startingInt = getRand(7, 20));
+				playersChar->setClass(classChoice);
 				return playersChar;
 			}
 			break;
