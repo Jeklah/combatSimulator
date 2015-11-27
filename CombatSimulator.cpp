@@ -46,7 +46,7 @@ enemy* createEnemy() {
 
 	return new enemy(name, str, def, hp, diffclty, ID);
 }
-//from now on it all it worked.
+//entry point
 int main()
 {
 	ItemTable itemsTable;

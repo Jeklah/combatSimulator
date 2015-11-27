@@ -49,20 +49,23 @@ void fight::fighting() {
 	int dDmg = getRand(1, defDmg);
 	cout << "\n" << "Let the fighting commence! \n";
 	while ((attHP > 0) | (defHP > 0)) {
+		//defender attacks first
 		if (defendant->getAtt() > attacker->getDef()) {
 			cout << defendant->getName() << " hit " << attacker->getName() << " for " << (dDmg - attArmr);
 			cout << "\nAttack: " << dDmg <<  "\nArmour: " << attArmr << "\nDefStr: " << defendant->getStr() << "\n";
 			Sleep(10000);
 			attHP = attHP - (dDmg - attArmr);
-			cout << attHP;
+			cout << "attacker hp: " << attHP << "\n";
 			if (attHP < 0) {
-				cout << "The fight is over!";
+				cout << "The fight is over!\n";
 				break;
 			}
 		}
 		else {
 			cout << defendant->getName() << " missed!";
 		}
+		//attacker attacks second
+
 			
 	}
 }
