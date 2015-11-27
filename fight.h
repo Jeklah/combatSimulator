@@ -19,6 +19,7 @@ class fight
 		fight(player*, enemy*);
 		void beginFight();
 		void fighting();
+		int getRand(int minRange, int maxRange);
 		int defDmg;
 		int attDmg;
 		int defArmr;

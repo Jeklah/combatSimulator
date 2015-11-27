@@ -1,12 +1,14 @@
 #pragma once
 #include <string>
+#include <ctime>
+#include <cmath>
 #include "stdafx.h"
 //spacing to make a box around the welcome screen.
 extern const std::string vertSpcPadding = "               ";
 extern const std::string horiSpcPadding = "                                                   ";
-extern const std::string header = "======================================================================================================================";
+extern const std::string header = "=======================================================================================================================";
 //random numbers for random stats for the character stats.
-int getRand(int rangeMin, int rangeMax)
+extern int getRand(int rangeMin, int rangeMax)
 {
 	return (int)floor(rand() / (RAND_MAX + 1.0) * ((rangeMax - rangeMin) + 1) + rangeMin);
 }

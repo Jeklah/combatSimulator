@@ -7,8 +7,6 @@
 #include "item.h"
 #include <Windows.h>
 #include <string>
-#include <ctime>
-#include <cmath>
 #include "inventory.h"
 #include "globals.h"
 #include "stdlib.h"
@@ -23,9 +21,8 @@ using namespace std;
 void welcome();
 int quit();
 int classChoose();
-int getRand(int rangeMin, int rangeMax);
 player* createPlayer(int classChoice);
-void typeText(string text);
+
 //declaring the function testing creating an item to see if i could add to inv..
 item* createTestItem()
 {
