@@ -40,7 +40,7 @@ enemy* createEnemy() {
 	string name = "Imp";
 	int str = 2;
 	int def = 1;
-	int hp = 3;
+	int hp = 20;
 	int diffclty = 1;
 	int ID = 0;
 
@@ -60,8 +60,8 @@ int main()
 	item* testItem = createTestItem();
 	itemsTable.addItem(createTestItem());
 
-	enemy* newEnemy = createEnemy();
-	enemysTable.addEnemy(newEnemy);
+	enemy* imp = createEnemy();
+	enemysTable.addEnemy(imp);
 
 	welcome();  //welcome screen. see welcome declaration
 
@@ -83,10 +83,10 @@ int main()
 	//typeText("this is a test"); works  //this. is special. this is a nice little function that prints out charaters slowly. its cool.
 
 	testItem = itemsTable.getItem(0);
-	newEnemy = enemysTable.getEnemy(0);
+	imp = enemysTable.getEnemy(0);
 
 	
-	newEnemy->getHP();
+	imp->getHP();
  
 
 	cout << vertSpcPadding;
@@ -108,8 +108,8 @@ int main()
 		cout << "Your story begins as you find yourself lost in a forest. There are two paths, one leading east with a faint light along it, the other is a dark, black path leading west. \n" << "Which way do you want to go? \n";
 		cin >> pathChoice;
 		if (pathChoice == "west") {
-			cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << newEnemy->getName() << " jumps out!";
-			newFight = new fight(playersChar, newEnemy);
+			cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << imp->getName() << " jumps out!";
+			newFight = new fight(playersChar, imp);
 			newFight->beginFight();
 			newFight->fighting();
 		}
