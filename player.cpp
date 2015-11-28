@@ -127,6 +127,27 @@ void player::setClass(int classChoice) {
 		
 }
 
+void player::setDef(int classChoice) {
+	switch (classChoice) {
+		case 1:
+		{
+			def = 4;
+		}
+		break;
+		case 2:
+		{
+			def = 5;
+		}
+		break;
+		case 3:
+		{
+			def = 3;
+		}
+		break;
+
+	}
+}
+
 int player::getClassID() {
 	return clssID;
 }

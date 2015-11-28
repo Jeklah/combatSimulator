@@ -40,6 +40,7 @@ class player
 		void createInv(ItemTable* itemsTable_, int invSize_);
 		int getInvSize();
 		void setClass(int classChoice);
+		void setDef(int classChoice);
 		int getClassID();
 		int getAtt();
 };

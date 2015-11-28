@@ -38,9 +38,9 @@ item* createTestItem()
 
 enemy* createEnemy() {
 	string name = "Imp";
-	int str = 2;
+	int str = 10;
 	int def = 1;
-	int hp = 20;
+	int hp = 100;
 	int diffclty = 1;
 	int ID = 0;
 
@@ -143,6 +143,7 @@ player* createPlayer(int classChoice)
 				cin >> name;
 				playersChar = new player(name, startingStr = getRand(7,20),startingAgi = getRand(1,10),startingInt = getRand(1, 10));
 				playersChar->setClass(classChoice);
+				playersChar->setDef(classChoice);
 				return playersChar;
 			}
 			break;

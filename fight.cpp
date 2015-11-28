@@ -15,7 +15,7 @@ fight::fight(player* defendant, enemy* attacker) :
 		case 1:
 		{
 			defDmg = defendant->getStr() -(attacker->getDiff() / 2) + (defendant->getStr() + 5);
-			defArmr = (defendant->getDef() + (defendant->getStr() / 3));
+			defArmr = defendant->getDef() +(defendant->getStr() / 3);
 
 		}
 		break;
@@ -46,12 +46,13 @@ void fight::beginFight() {
 void fight::fighting() {
 	int defHP = defendant->getHP();
 	int attHP = attacker->getHP();
-	int dDmg = getRand(1, defDmg);
-	int aDmg = getRand(1, attDmg);
+
 	cout << "\n" << "Let the fighting commence! \n";
 	while ((attHP > 0) | (defHP > 0)) {
+		int dDmg = getRand(1, defDmg);
+		int aDmg = getRand(1, attDmg);
 		//defender attacks first
-		if (defendant->getAtt() > attacker->getDef()) {
+		if (defendant->getAtt() > getRand(1,attacker->getDef())) {
 			cout << defendant->getName() << " hit " << attacker->getName() << " for " << (dDmg - attArmr);
 			cout << "\nAttack: " << dDmg <<  "\nArmour: " << attArmr << "\nDefStr: " << defendant->getStr() << "\n";
 			attHP = attHP - (dDmg - attArmr);
@@ -63,10 +64,10 @@ void fight::fighting() {
 			}
 		}
 		else {
-			cout << defendant->getName() << " missed!";
+			cout << defendant->getName() << " missed!\n";
 		}
 		//attacker attacks second
-		if (attDmg > defendant->getDef()) {
+		if (attDmg > getRand(1, defendant->getDef())) {
 			cout << attacker->getName() << " hit " << defendant->getName() << " for " << (aDmg - defArmr);
 			cout << "\nAttack: " << aDmg << "\nArmour: " << defArmr << "\nDefStr: " << attacker->getStr() << "\n";
 			Sleep(10000);
@@ -78,7 +79,7 @@ void fight::fighting() {
 			}
 		}
 		else {
-			cout << attacker->getName() << " missed!";
+			cout << attacker->getName() << " missed!\n" << "attdmg: " << attDmg << "\n";
 		}
 			
 	}
