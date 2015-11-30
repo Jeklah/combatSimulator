@@ -16,6 +16,7 @@ player::player(string name, int startStr, int startAgi, int startInt):
 	lvl = 0;
 	xp = 0;
 	health = strength / 2;
+	hit = 0;
 	//attackDmg = 0;
 	
 	/*if (strength > 15)
@@ -25,21 +26,40 @@ player::player(string name, int startStr, int startAgi, int startInt):
 
 }
 
-int player::getAtt() {
-	switch (clssID) {
+void player::setHit(int classChoice) {
+	switch (classChoice) {
 		case 1:
 		{
-			return (strength / 2) + 3;
+			hit = 5;
 		}
 		break;
 		case 2:
 		{
-			return (agility/ 2) + 3;
+			hit = 3;
 		}
 		break;
 		case 3:
 		{
-			return (intelligence / 2) + 3;
+			hit = 1;
+		}
+		break;
+	}
+}
+int player::getHit() {
+	switch (clssID) {
+		case 1:
+		{
+			return hit;
+		}
+		break;
+		case 2:
+		{
+			return hit;
+		}
+		break;
+		case 3:
+		{
+			return hit;
 		}
 		break;
 		default:

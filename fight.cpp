@@ -52,12 +52,13 @@ void fight::fighting() {
 		int dDmg = getRand(1, defDmg);
 		int aDmg = getRand(1, attDmg);
 		//defender attacks first
-		if (defendant->getAtt() > getRand(1,attacker->getDef())) {
+		if (getRand(1, defendant->getHit()) > attacker->getDef()) {
+			cout << defendant->getName() << "'s turn!\n";
 			cout << defendant->getName() << " hit " << attacker->getName() << " for " << (dDmg - attArmr);
-			cout << "\ndefAttack: " << defendant->getAtt() <<  "\nattMaxArmour: " << attacker->getDef() <<  "\n";
+			cout << "\ndefAttack: " << defendant->getHit() <<  "\nattMaxArmour: " << attacker->getDef() <<  "\n";
 			attHP = attHP - (dDmg - attArmr);
 			cout << "defDmg: " << (dDmg - attArmr) << "\n";
-			cout << "attacker hp: " << attHP << "\n";
+			cout << "attacker hp: " << attHP << "\n\n";
 			Sleep(5000);
 			if (attHP < 0) {
 				cout << "The fight is over!\n";
@@ -66,21 +67,24 @@ void fight::fighting() {
 		}
 		else {
 			cout << defendant->getName() << " missed!\n";
+			Sleep(5000);
 		}
 		//attacker attacks second
-		if (attDmg > getRand(1, defendant->getDef() + 3)) {
+		if (getRand(1, attDmg) >  defendant->getDef() ) {
+			cout << attacker->getName() << "'s turn!\n";
 			cout << attacker->getName() << " hit " << defendant->getName() << " for " << aDmg;
 			cout << "\nattAttack: " << attDmg << "\ndefMaxArmour: " << defendant->getDef() << "\n";
 			Sleep(5000);
 			defHP = defHP - aDmg;
-			cout << "player hp: " << defHP << "\n";
+			cout << "player hp: " << defHP << "\n\n";
 			if (defHP < 0) {
 				cout << "The fight is over!\n";
 				break;
 			}
 		}
 		else {
-			cout << attacker->getName() << " missed!\n" << "attdmg: " << attDmg << "\n";
+			cout << attacker->getName() << " missed!\n";
+			Sleep(5000);
 		}
 			
 	}

@@ -19,7 +19,8 @@ class player
 		string name;
 		int def;
 		int clssID;
-		
+		int hit;
+
 		
 	public:
 		player();
@@ -42,5 +43,6 @@ class player
 		void setClass(int classChoice);
 		void setDef(int classChoice);
 		int getClassID();
-		int getAtt();
-};
+		int getHit();
+		void setHit(int classChoice);
+};		
