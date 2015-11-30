@@ -20,7 +20,7 @@ class player
 		int def;
 		int clssID;
 		int hit;
-
+		
 		
 	public:
 		player();

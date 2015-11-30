@@ -26,47 +26,6 @@ player::player(string name, int startStr, int startAgi, int startInt):
 
 }
 
-void player::setHit(int classChoice) {
-	switch (classChoice) {
-		case 1:
-		{
-			hit = 5;
-		}
-		break;
-		case 2:
-		{
-			hit = 3;
-		}
-		break;
-		case 3:
-		{
-			hit = 1;
-		}
-		break;
-	}
-}
-int player::getHit() {
-	switch (clssID) {
-		case 1:
-		{
-			return hit;
-		}
-		break;
-		case 2:
-		{
-			return hit;
-		}
-		break;
-		case 3:
-		{
-			return hit;
-		}
-		break;
-		default:
-			break;
-	}
-}
-
 int player::heal()
 {
 	cout << "\n I'm healing, watch my back!";
@@ -151,7 +110,7 @@ void player::setDef(int classChoice) {
 	switch (classChoice) {
 		case 1:
 		{
-			def = 4;
+			def = 3;
 		}
 		break;
 		case 2:
@@ -165,6 +124,48 @@ void player::setDef(int classChoice) {
 		}
 		break;
 
+	}
+}
+
+void player::setHit(int classChoice) {
+	switch (classChoice) {
+	case 1:
+	{
+		hit = 5;
+	}
+	break;
+	case 2:
+	{
+		hit = 3;
+	}
+	break;
+	case 3:
+	{
+		hit = 1;
+	}
+	break;
+	}
+}
+
+int player::getHit() {
+	switch (clssID) {
+	case 1:
+	{
+		return hit;
+	}
+	break;
+	case 2:
+	{
+		return hit;
+	}
+	break;
+	case 3:
+	{
+		return hit;
+	}
+	break;
+	default:
+		break;
 	}
 }
 

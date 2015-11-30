@@ -134,6 +134,7 @@ player* createPlayer(int classChoice)
 	int startingAgi;
 	int startingInt;
 	player *playersChar;
+	int cid;
 
 	srand((long)time(0));
 	switch (classChoice)  //choosing the class
@@ -144,10 +145,11 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				if (name == "howi" | name == "howard" | name == "Howi" | name == "Howard") { howi(); };
-				playersChar = new player(name, startingStr = getRand(7,20),startingAgi = getRand(1,10),startingInt = getRand(1, 10));
+				playersChar = new player(name, startingStr = getRand(3,10),startingAgi = getRand(2,10),startingInt = getRand(1, 5));
 				playersChar->setClass(classChoice);
-				playersChar->setDef(classChoice);
-				playersChar->setHit(classChoice);
+				cid = playersChar->getClassID();
+				playersChar->setDef(cid);
+				playersChar->setHit(cid);
 				return playersChar;
 			}
 			break;
@@ -157,10 +159,11 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				if (name == "howi" | name == "howard" | name == "Howi" | name == "Howard") { howi(); };
-				playersChar = new player(name, startingStr = getRand(1,10),startingAgi = getRand(7,20),startingInt = getRand(1, 10));
+				playersChar = new player(name, startingStr = getRand(2,10),startingAgi = getRand(3,10),startingInt = getRand(1, 7));
 				playersChar->setClass(classChoice);
-				playersChar->setDef(classChoice);
-				playersChar->setHit(classChoice);
+				cid = playersChar->getClassID();
+				playersChar->setDef(cid);
+				playersChar->setHit(cid);
 				return playersChar;
 			}
 			break;
@@ -170,10 +173,11 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				if (name == "howi" | name == "howard" | name == "Howi" | name == "Howard") { howi(); };
-				playersChar = new player(name, startingStr = getRand(1,10),startingAgi = getRand(1,10),startingInt = getRand(7, 20));
+				playersChar = new player(name, startingStr = getRand(1,5),startingAgi = getRand(1,8),startingInt = getRand(5, 15));
 				playersChar->setClass(classChoice);
-				playersChar->setDef(classChoice);
-				playersChar->setHit(classChoice);
+				cid = playersChar->getClassID();
+				playersChar->setDef(cid);
+				playersChar->setHit(cid);
 				return playersChar;
 			}
 			break;
@@ -183,17 +187,16 @@ player* createPlayer(int classChoice)
 
 string directionChoice(int pathChoice) {
 	string path;
-	//writr a function to turn words into numbers for switch cases. switch accepts ints not strings.
-	
-	switch (pathChoice) {
-		case 1:{
-		
+		switch (pathChoice) {
+		case 1:
+		{
 			cout << "The east path. It looks dark and gloomy.";
 			cin >> path;
 			return path;
 		}
 		break;
-		case 2: {
+		case 2:
+		{
 			cout << "The west path. There is a dark path but a faint light at the end...";
 			cin >> path;
 			return path;
@@ -249,21 +252,21 @@ int quit()
 void howi() {
 	system("CLS");
 
-	typeText("   master    "); cout << "";typeText("                         \n");
-	typeText("    trole    "); cout << "";typeText("                         \n");
-	typeText("   2015      "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("     bruh                \n");
-	typeText("             "); cout << "";typeText("                         \n");
-	typeText(" pussys      "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("         noob            \n");
-	typeText("             "); cout << "";typeText("                         \n");
-	typeText("   fknpssy   "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("                         \n");
-	typeText("             "); cout << "";typeText("  such troles            \n");
-	typeText("             "); cout << "";typeText("                         \n");
+	typeText("   master    "); /*cout << "";*/typeText("                 \n");
+	typeText("    trole    "); /*cout << "";*/typeText("                 \n");
+	typeText("   2015      "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("     bruh        \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
+	typeText(" pussys      "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("         noob    \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
+	typeText("   fknpssy   "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
+	typeText("             "); /*cout << "";*/typeText("  such troles    \n");
+	typeText("             "); /*cout << "";*/typeText("                 \n");
 
 
 
