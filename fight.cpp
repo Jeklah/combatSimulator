@@ -74,9 +74,9 @@ void fight::fighting() {
 			cout << attacker->getName() << "'s turn!\n";
 			cout << attacker->getName() << " hit " << defendant->getName() << " for " << aDmg;
 			cout << "\nattAttack: " << attDmg << "\ndefMaxArmour: " << defendant->getDef() << "\n";
-			Sleep(5000);
 			defHP = defHP - aDmg;
 			cout << "player hp: " << defHP << "\n\n";
+			Sleep(5000);
 			if (defHP < 0) {
 				cout << "The fight is over!\n";
 				break;

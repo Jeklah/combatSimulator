@@ -129,44 +129,44 @@ void player::setDef(int classChoice) {
 
 void player::setHit(int classChoice) {
 	switch (classChoice) {
-	case 1:
-	{
-		hit = 5;
-	}
-	break;
-	case 2:
-	{
-		hit = 3;
-	}
-	break;
-	case 3:
-	{
-		hit = 1;
-	}
-	break;
-	}
+		case 1:
+		{
+			hit = 5;
+		}
+		break;
+		case 2:
+		{
+			hit = 3;
+		}
+		break;
+		case 3:
+		{
+			hit = 1;
+		}
+		break;
+		}
 }
 
 int player::getHit() {
 	switch (clssID) {
-	case 1:
-	{
-		return hit;
-	}
-	break;
-	case 2:
-	{
-		return hit;
-	}
-	break;
-	case 3:
-	{
-		return hit;
-	}
-	break;
-	default:
+		case 1:
+		{
+			return hit;
+		}
 		break;
-	}
+		case 2:
+		{
+			return hit;
+		}
+		break;
+		case 3:
+		{
+			return hit;
+		}
+		break;
+		default:
+			break;
+		}
 }
 
 int player::getClassID() {

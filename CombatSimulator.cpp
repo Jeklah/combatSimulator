@@ -38,15 +38,8 @@ item* createTestItem()
 	return new item(name, id, weight, mainStat, offStat, minorStat);
 }
 
-enemy* createEnemy() {
-	string name = "Imp";
-	int str = 3;
-	int def = 1;
-	int hp = 10;
-	int diffclty = 1;
-	int ID = 0;
-
-	return new enemy(name, str, def, hp, diffclty, ID);
+enemy* createEnemy(string _name, int _str, int _def, int _hp, int _diff, int _id) {
+	return new enemy(_name, _str, _def, _hp, _diff, _id);
 }
 //entry point
 int main()
@@ -62,7 +55,9 @@ int main()
 	item* testItem = createTestItem();
 	itemsTable.addItem(createTestItem());
 
-	enemy* imp = createEnemy();
+	enemy* imp = createEnemy("Imp", 3, 1, 10, 1, 0);
+	enemy* ogre = createEnemy("Ogre", 7, 4, 15, 3, 1);
+	enemysTable.addEnemy(ogre);
 	enemysTable.addEnemy(imp);
 
 	welcome();  //welcome screen. see welcome declaration
@@ -85,9 +80,10 @@ int main()
 	//typeText("this is a test"); works  //this. is special. this is a nice little function that prints out charaters slowly. its cool.
 
 	testItem = itemsTable.getItem(0);
-	imp = enemysTable.getEnemy(0);
+	ogre = enemysTable.getEnemy(0);
+	imp = enemysTable.getEnemy(1);
 
-	
+	ogre->getHP();
 	imp->getHP();
  
 
@@ -111,12 +107,19 @@ int main()
 		cin >> pathChoice;
 		if (pathChoice == "west") {
 			cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << imp->getName() << " jumps out!";
+			Sleep(3000);
 			newFight = new fight(playersChar, imp);
 			newFight->beginFight();
 			newFight->fighting();
+			cout << imp->getName();
+			cout << ogre->getName();
 		}
 		else {
-			cout << "You walk eastwards towards the light path, but suddenly something rustles in the bushes and jumps out! It's an ";
+			cout << "You walk eastwards towards the light path, but suddenly you hear large stomping. It's an " << ogre->getName() << "!";
+			Sleep(3000);
+			newFight = new fight(playersChar, ogre);
+			newFight->beginFight();
+			newFight->fighting();
 		}
 
 		quit();
