@@ -25,7 +25,7 @@ class player
 	public:
 		player();
 		player(string name, int startStr, int startAgi, int startInt);
-		void attack();
+
 		int heal();
 		int gainXP();
 		int getHP();
