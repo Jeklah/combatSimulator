@@ -38,8 +38,8 @@ item* createTestItem()
 	return new item(name, id, weight, mainStat, offStat, minorStat);
 }
 
-enemy* createEnemy(string _name, int _str, int _def, int _hp, int _diff, int _id) {
-	return new enemy(_name, _str, _def, _hp, _diff, _id);
+enemy* createEnemy(string _name, int _str, int _def, int _hp, int _diff, int _id, int _hit) {
+	return new enemy(_name, _str, _def, _hp, _diff, _id, _hit);
 }
 //entry point
 int main()
@@ -55,8 +55,8 @@ int main()
 	item* testItem = createTestItem();
 	itemsTable.addItem(createTestItem());
 
-	enemy* imp = createEnemy("Imp", 3, 1, 10, 1, 0);
-	enemy* ogre = createEnemy("Ogre", 7, 4, 15, 3, 1);
+	enemy* imp = createEnemy("Imp", 3, 1, 10, 1, 0, 4);
+	enemy* ogre = createEnemy("Ogre", 7, 4, 15, 3, 1, 6);
 	enemysTable.addEnemy(ogre);
 	enemysTable.addEnemy(imp);
 
@@ -111,8 +111,6 @@ int main()
 			newFight = new fight(playersChar, imp);
 			newFight->beginFight();
 			newFight->fighting();
-			cout << imp->getName();
-			cout << ogre->getName();
 		}
 		else {
 			cout << "You walk eastwards towards the light path, but suddenly you hear large stomping. It's an " << ogre->getName() << "!";
@@ -148,7 +146,7 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				if (name == "howi" | name == "howard" | name == "Howi" | name == "Howard") { howi(); };
-				playersChar = new player(name, startingStr = getRand(3,10),startingAgi = getRand(2,10),startingInt = getRand(1, 5));
+				playersChar = new player(name, startingStr = getRand(4,7),startingAgi = getRand(2,7),startingInt = getRand(1, 3));
 				playersChar->setClass(classChoice);
 				cid = playersChar->getClassID();
 				playersChar->setDef(cid);
@@ -162,7 +160,7 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				if (name == "howi" | name == "howard" | name == "Howi" | name == "Howard") { howi(); };
-				playersChar = new player(name, startingStr = getRand(2,10),startingAgi = getRand(3,10),startingInt = getRand(1, 7));
+				playersChar = new player(name, startingStr = getRand(2,7),startingAgi = getRand(3,7),startingInt = getRand(1, 5));
 				playersChar->setClass(classChoice);
 				cid = playersChar->getClassID();
 				playersChar->setDef(cid);
@@ -176,7 +174,7 @@ player* createPlayer(int classChoice)
 				cout << vertSpcPadding << "What would you like to call your character?: ";
 				cin >> name;
 				if (name == "howi" | name == "howard" | name == "Howi" | name == "Howard") { howi(); };
-				playersChar = new player(name, startingStr = getRand(1,5),startingAgi = getRand(1,8),startingInt = getRand(5, 15));
+				playersChar = new player(name, startingStr = getRand(1,3),startingAgi = getRand(1,6),startingInt = getRand(5, 10));
 				playersChar->setClass(classChoice);
 				cid = playersChar->getClassID();
 				playersChar->setDef(cid);
@@ -230,14 +228,14 @@ void welcome()
 	
 	for (int i = 0; i < 3; i++)
 		cout << horiSpcPadding << endl;
-	cout << vertSpcPadding << "===================================================" << endl;
+	cout << vertSpcPadding << welcomeBorder << endl;
 	for (int i =0; i < 2; i++)
 		cout << vertSpcPadding << horiBlkPadding << endl;
 	cout << vertSpcPadding << "||        Welcome to the combat simulator!       ||" << endl;
 	cout << vertSpcPadding << horiBlkPadding << endl;;
 	cout << vertSpcPadding << "||              Please pick a class              ||" << endl;
 	cout << vertSpcPadding << horiBlkPadding << endl;
-	cout << vertSpcPadding << "===================================================" << endl;
+	cout << vertSpcPadding << welcomeBorder << endl;
 	cout << endl;
 }
 

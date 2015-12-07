@@ -17,9 +17,10 @@ class enemy
 		int hp;
 		int diffclty;
 		int enemyID;
+		int hit;
 
-	public:
-		enemy(string name, int str, int def, int hp, int diff, int enemyID);
+	public: //need to make getHit and refactor fight.cpp to use it instead of the mess it does atm.
+		enemy(string name, int str, int def, int hp, int diff, int enemyID, int hit);
 		string getName();
 		int attack(int defence);
 		int getHP();
@@ -28,6 +29,7 @@ class enemy
 		int getDiff();
 		int getStr();
 		int getDef();
+		int getHit();
 	
 };
 

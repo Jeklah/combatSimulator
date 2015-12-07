@@ -6,16 +6,21 @@
 
 using namespace std;
 
-enemy::enemy(string name, int str, int def, int hp, int diff, int enemyID) :
+enemy::enemy(string name, int str, int def, int hp, int diff, int enemyID, int _hit) :
 	name(name),
 	str(str),
 	def(def),
 	diffclty(diff),
 	hp(hp),
-	enemyID(enemyID)
+	enemyID(enemyID),
+	hit(_hit)
 	
 
 {
+}
+
+int enemy::getHit() {
+	return hit;
 }
 
 string enemy::getName() {

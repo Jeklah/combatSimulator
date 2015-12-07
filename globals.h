@@ -7,6 +7,7 @@
 extern const std::string vertSpcPadding = "               ";
 extern const std::string horiSpcPadding = "                                                   ";
 extern const std::string header = "=======================================================================================================================";
+extern const std::string welcomeBorder = "===================================================";
 //random numbers for random stats for the character stats.
 extern int getRand(int rangeMin, int rangeMax)
 {

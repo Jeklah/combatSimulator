@@ -15,7 +15,7 @@ player::player(string name, int startStr, int startAgi, int startInt):
 {
 	lvl = 0;
 	xp = 0;
-	health = strength / 2;
+	health = strength / 3;
 	hit = 0;
 	//attackDmg = 0;
 	
@@ -110,17 +110,17 @@ void player::setDef(int classChoice) {
 	switch (classChoice) {
 		case 1:
 		{
-			def = 3;
+			def = 2;
 		}
 		break;
 		case 2:
 		{
-			def = 5;
+			def = 4;
 		}
 		break;
 		case 3:
 		{
-			def = 3;
+			def = 2;
 		}
 		break;
 
