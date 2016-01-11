@@ -252,9 +252,34 @@ int quit()
 
 void howi() {
 	system("CLS");
+	char buffer[] = { 176, 223, 220, 177, 223, 222, 177 };
+	string output;
+	typeText("   master    "); 
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 8; i++) {
+		typeText(output = (char)buffer[4]);
+	};
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 6; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
 
-	typeText("   master    "); /*cout << "";*/typeText("                 \n");
-	typeText("    trole    "); /*cout << "";*/typeText("                 \n");
+	typeText("    trole    ");
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText("                 \n");
 	typeText("   2015      "); /*cout << "";*/typeText("                 \n");
 	typeText("             "); /*cout << "";*/typeText("                 \n");
 	typeText("             "); /*cout << "";*/typeText("     bruh        \n");
