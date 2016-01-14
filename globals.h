@@ -20,7 +20,7 @@ void typeText(string text)
 	for (size_t i = 0; i < text.size(); ++i)
 	{
 		cout << text[i] << flush;
-		Sleep(100);
+		Sleep(50);
 
 	}
 }

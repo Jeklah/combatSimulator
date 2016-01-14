@@ -250,28 +250,317 @@ int quit()
 	return 0;
 }
 
+//thought: entire howi() can be refactored into 3 for loops. 1 for the amount of lines, 1 for the amount of characters per line, and 1 for the seq of chars.
+//make an array to store the character seq per line.
 void howi() {
 	system("CLS");
-	char buffer[] = { 176, 223, 220, 177, 223, 222, 177 };
+	char buffer[] = { 176, 223, 220, 177 };
 	string output;
 	typeText("   master    "); 
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 5; i++) {
 		typeText(output = (char)buffer[0]);
 	};
 	for (int i = 0; i < 4; i++) {
 		typeText(output = (char)buffer[2]);
 	};
 	for (int i = 0; i < 8; i++) {
-		typeText(output = (char)buffer[4]);
+		typeText(output = (char)buffer[1]);
 	};
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 7; i++) {
 		typeText(output = (char)buffer[2]);
 	};
-	for (int i = 0; i < 6; i++) {
+	for (int i = 0; i < 9; i++) {
 		typeText(output = (char)buffer[0]);
 	};	typeText("                 \n");
 
 	typeText("    trole    ");
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 12; i++) {
+		typeText(output = (char)buffer[3]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	typeText(output = (char)buffer[2]);
+	for (int i = 0; i < 6; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("  wow         \n");
+
+	typeText("   2015      "); 
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 6; i++) {
+		typeText(output = (char)buffer[3]);
+	};
+	for (int i = 0; i < 8; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[3]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
+
+	typeText("             ");
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 6; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[2]);
+	for (int i = 0; i < 2; i++) {
+		std::cout << (unsigned char)219;
+	}
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
+
+	typeText("             ");
+	typeText(output = (char)buffer[0]);
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[1]);
+	typeText(output = (char)buffer[3]);
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[3]);
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 2; i++) {
+		std::cout << (unsigned char)219;
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("     bruh        \n");
+
+	typeText("             ");
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[0]);
+	typeText(output = (char)buffer[3]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[3]);
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[0]);
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 8; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[3]);
+	};
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
+
+	typeText(" pussys      ");
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[0]);
+	typeText(output = (char)buffer[3]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[1]);
+	typeText(output = (char)buffer[2]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[2]);
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[3]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	}; typeText("                 \n");
+
+	typeText("             ");
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[0]);
+	typeText(output = (char)buffer[1]);
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[0]);
+
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[0]);
+	typeText(output = (char)buffer[1]);
+	typeText(output = (char)buffer[0]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	typeText(output = (char)buffer[0]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
+
+	typeText("             ");
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[1]);
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[1]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 2; i++) {
+		std::cout << (unsigned char)219;
+	};
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
+
+	typeText("        wow  ");
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 2; i++) {
+		std::cout << (unsigned char)219;
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[1]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[2]);
+	for (int i = 0; i < 4; i++) {
+		std::cout << (unsigned char)219;
+	};
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 5; i++ ) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("         noob    \n");
+
+	typeText("             ");
 	for (int i = 0; i < 4; i++) {
 		typeText(output = (char)buffer[0]);
 	};
@@ -279,23 +568,133 @@ void howi() {
 	for (int i = 0; i < 4; i++) {
 		typeText(output = (char)buffer[0]);
 	};
-	typeText("                 \n");
-	typeText("   2015      "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("     bruh        \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
-	typeText(" pussys      "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("         noob    \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
-	typeText("   fknpssy   "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
-	typeText("             "); /*cout << "";*/typeText("  such troles    \n");
-	typeText("             "); /*cout << "";*/typeText("                 \n");
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 6; i++) {
+		std::cout << (unsigned char)219;
+	};
+	typeText(output = (char)buffer[0]);
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");  
 
+	typeText("   fknpssy   ");
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[1]);
+	typeText(output = (char)buffer[2]);
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[2]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[2]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[2]);
+	std::cout << (unsigned char)219;
+	typeText(output = (char)buffer[2]);
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
 
+	typeText("             ");
+	for (int i = 0; i < 7; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[0]);
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[3]);
+	};
+	for (int i = 0; i < 10; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[3]);
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
 
+	typeText("             "); 
+	for (int i = 0; i < 9; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	for (int i = 0; i < 2; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	typeText(output = (char)buffer[0]);
+	for (int i = 0; i < 11; i++) {
+		typeText(output = (char)buffer[3]);
+	};
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 3; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("  such troles    \n");
+
+	typeText("             ");
+	for (int i = 0; i < 13; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	typeText(output = (char)buffer[1]);
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[2]);
+	};
+	for (int i = 0; i < 9; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	std::cout << (unsigned char)219;
+	for (int i = 0; i < 4; i++) {
+		typeText(output = (char)buffer[0]);
+	};	typeText("                 \n");
+
+	typeText("             ");
+	for (int i = 0; i < 19; i++) {
+		typeText(output = (char)buffer[0]);
+	};
+	for (int i = 0; i < 9; i++) {
+		typeText(output = (char)buffer[1]);
+	};
+	for (int i = 0; i < 5; i++) {
+		typeText(output = (char)buffer[0]);
+	}; typeText("                 \n");
+	
 	Sleep(1000);
-	system("CLS");
+	//system("CLS");
 }
