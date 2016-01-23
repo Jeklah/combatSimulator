@@ -64,28 +64,23 @@ int main()
 
 	int classChoice;
 	classChoice = classChoose();  //deciding class
-
 	
 	playersChar =  createPlayer(classChoice);  //create character of chosen class
 	cout <<  vertSpcPadding << "Hello, I am name is " << playersChar->getName() << endl; //check character was created
 
 	playersChar->createInv(&itemsTable, 30);
 	cout << vertSpcPadding << "Your bag has " << playersChar->getInvSize() << '\n' <<  endl; //checking stats of inv
-	
-	
+
 
 	//Test code, please don't remove, for future reference.
 	//cout << vertSpcPadding << "Test item stats: " << testItem->getMainStat() << endl; //checking item
 	
-	
-
 	ogre = enemysTable.getEnemy(0);
 	imp = enemysTable.getEnemy(1);
-
+	
 	ogre->getHP();
 	imp->getHP();
  
-
 	cout << vertSpcPadding;
 	playersInv.addItem(0);
 	playersInv.printItem(std::cout, 0);
