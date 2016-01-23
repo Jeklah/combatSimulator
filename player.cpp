@@ -136,7 +136,7 @@ void player::setHit(int classChoice) {
 		break;
 		case 2:
 		{
-			hit = 3;
+			hit = player::getAgi() + 3;
 		}
 		break;
 		case 3:
