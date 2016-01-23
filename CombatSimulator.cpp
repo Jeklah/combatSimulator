@@ -234,8 +234,6 @@ void welcome()
 }
 
 
-
-
 int quit()
 {
 	cout << "\n";
