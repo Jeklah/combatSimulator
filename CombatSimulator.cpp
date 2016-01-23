@@ -56,7 +56,7 @@ int main()
 	itemsTable.addItem(createTestItem());
 
 	enemy* imp = createEnemy("Imp", 3, 1, 10, 1, 0, 4);
-	enemy* ogre = createEnemy("Ogre", 7, 4, 15, 3, 1, 6);
+	enemy* ogre = createEnemy("Ogre", 7, 3, 15, 3, 1, 6);
 	enemysTable.addEnemy(ogre);
 	enemysTable.addEnemy(imp);
 

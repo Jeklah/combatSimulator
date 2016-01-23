@@ -15,7 +15,7 @@ player::player(string name, int startStr, int startAgi, int startInt):
 {
 	lvl = 0;
 	xp = 0;
-	health = strength / 3;
+	health = strength * 3;
 	hit = 0;
 	//attackDmg = 0;
 	
