@@ -73,7 +73,7 @@ void fight::fighting() {
 		}
 		else {
 			cout << defendant->getName() << " missed!\n";
-			Sleep(5000);
+			Sleep(3000);
 		}
 		//attacker attacks second
 
@@ -96,7 +96,7 @@ void fight::fighting() {
 		}
 		else {
 			cout << attacker->getName() << " missed!\n";
-			Sleep(5000);
+			Sleep(3000);
 		}
 			
 	}
