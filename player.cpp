@@ -110,12 +110,12 @@ void player::setDef(int classChoice) {
 	switch (classChoice) {
 		case 1:
 		{
-			def = 2;
+			def = player::getAgi() / 2;
 		}
 		break;
 		case 2:
 		{
-			def = 4;
+			def = player::getAgi() / 2;
 		}
 		break;
 		case 3:
@@ -131,7 +131,7 @@ void player::setHit(int classChoice) {
 	switch (classChoice) {
 		case 1:
 		{
-			hit = 5;
+			hit = player::getAgi() + 1;
 		}
 		break;
 		case 2:

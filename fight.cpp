@@ -67,7 +67,7 @@ void fight::fighting() {
 				Sleep(5000);
 			}
 			if (attHP <= 0) {
-				cout << "The fight is over!\n " << defendant->getName() + " won the fight";
+				cout << "The fight is over!\n" << defendant->getName() + " won the fight";
 				break;
 			}
 		}
