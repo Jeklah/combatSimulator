@@ -77,7 +77,7 @@ int main()
 	//Test code, please don't remove, for future reference.
 	//cout << vertSpcPadding << "Test item stats: " << testItem->getMainStat() << endl; //checking item
 	
-	//typeText("this is a test"); works  //this. is special. this is a nice little function that prints out charaters slowly. its cool.
+	
 
 	ogre = enemysTable.getEnemy(0);
 	imp = enemysTable.getEnemy(1);
