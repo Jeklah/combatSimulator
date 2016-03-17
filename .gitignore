@@ -252,3 +252,4 @@ _Pvt_Extensions
 Debug/
 *.vcxproj
 *.vcxproj.filters
+*.suo
