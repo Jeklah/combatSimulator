@@ -101,14 +101,14 @@ int main()
 		cin >> pathChoice;
 		if (pathChoice == "west") {
 			cout << "You walk slowly down the gloomy path, feeling your way through the darkness. Eventually you start to see some light ahead, you quicken your pace, but suddenly an " << imp->getName() << " jumps out!";
-			Sleep(3000);
+			Sleep(6000);
 			newFight = new fight(playersChar, imp);
 			newFight->beginFight();
 			newFight->fighting();
 		}
 		else {
 			cout << "You walk eastwards towards the light path, but suddenly you hear large stomping. It's an " << ogre->getName() << "!";
-			Sleep(3000);
+			Sleep(6000);
 			newFight = new fight(playersChar, ogre);
 			newFight->beginFight();
 			newFight->fighting();
