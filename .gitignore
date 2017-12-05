@@ -254,3 +254,4 @@ Debug/
 *.vcxproj.filters
 *.suo
 *.VC.db
+*.VC.VC.opendb
