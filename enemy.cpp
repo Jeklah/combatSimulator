@@ -14,7 +14,7 @@ enemy::enemy(string name, int str, int def, int hp, int diff, int enemyID, int _
 	hp(hp),
 	enemyID(enemyID),
 	hit(_hit)
-	
+
 
 {
 }

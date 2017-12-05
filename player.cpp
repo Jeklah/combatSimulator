@@ -18,7 +18,7 @@ player::player(string name, int startStr, int startAgi, int startInt):
 	health = strength * 3;
 	hit = 0;
 	//attackDmg = 0;
-	
+
 	/*if (strength > 15)
 		playersInventory = new inventory(50);
 	else
@@ -103,7 +103,7 @@ void player::setClass(int classChoice) {
 		}
 		break;
 	}
-		
+
 }
 
 void player::setDef(int classChoice) {
@@ -141,7 +141,7 @@ void player::setHit(int classChoice) {
 		break;
 		case 3:
 		{
-			hit = 1;
+			hit = 2;
 		}
 		break;
 		}
@@ -172,30 +172,4 @@ int player::getHit() {
 int player::getClassID() {
 	return clssID;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

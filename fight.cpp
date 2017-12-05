@@ -21,14 +21,14 @@ fight::fight(player* defendant, enemy* attacker) :
 		break;
 		case 2:
 		{
-			defDmg = (defendant->getAgi() / attacker->getDef()) + (attacker->getDiff() / 2);
+			defDmg = (defendant->getAgi() / attacker->getDef()) + attacker->getDiff() ;
 			defArmr = (defendant->getDef() + (defendant->getAgi() / 2));
 		}
 		break;
 		case 3:
 		{
 			defDmg = (defendant->getInt() / attacker->getDef()) + (attacker->getDiff() / 2);
-			defArmr = (defendant->getDef() + (defendant->getInt() / 4));
+			defArmr = (defendant->getDef() + (defendant->getInt() / 3.5));
 		}
 		break;
 	}
@@ -40,7 +40,7 @@ void fight::beginFight() {
 	attDmg = attacker->attack(defendant->getDef());
 	attArmr = attacker->getDef();
 
-	
+
 }
 
 void fight::fighting() {
@@ -98,7 +98,7 @@ void fight::fighting() {
 			cout << attacker->getName() << " missed!\n";
 			Sleep(3000);
 		}
-			
+
 	}
 }
 
