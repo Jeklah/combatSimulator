@@ -253,3 +253,4 @@ Debug/
 *.vcxproj
 *.vcxproj.filters
 *.suo
+*.VC.db
