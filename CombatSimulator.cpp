@@ -64,7 +64,7 @@ int main()
 
 	int classChoice;
 	classChoice = classChoose();  //deciding class
-	
+
 	playersChar =  createPlayer(classChoice);  //create character of chosen class
 	cout <<  vertSpcPadding << "Hello, I am name is " << playersChar->getName() << endl; //check character was created
 
@@ -74,13 +74,13 @@ int main()
 
 	//Test code, please don't remove, for future reference.
 	//cout << vertSpcPadding << "Test item stats: " << testItem->getMainStat() << endl; //checking item
-	
+
 	ogre = enemysTable.getEnemy(0);
 	imp = enemysTable.getEnemy(1);
-	
+
 	ogre->getHP();
 	imp->getHP();
- 
+
 	cout << vertSpcPadding;
 	playersInv.addItem(0);
 	playersInv.printItem(std::cout, 0);
@@ -88,7 +88,7 @@ int main()
 	cout << vertSpcPadding;
 	cout << "Are you sitting comfortably? y/n ";
 	cin >> rdy;
-	
+
 	if (rdy == "y") {
 		cout << vertSpcPadding << "Then I'll begin.\n";
 		Sleep(20);
@@ -117,11 +117,10 @@ int main()
 		quit();
 	}
 
-	
+
 }
 
-
-//declaring creating the character 
+//declaring creating the character
 player* createPlayer(int classChoice)
 {
 	string name;
@@ -177,7 +176,7 @@ player* createPlayer(int classChoice)
 			}
 			break;
 	}
-	
+
 }
 
 string directionChoice(int pathChoice) {
@@ -219,7 +218,7 @@ int classChoose()
 void welcome()
 {
 	string horiBlkPadding = "||                                               ||";
-	
+
 	for (int i = 0; i < 3; i++)
 		cout << horiSpcPadding << endl;
 	cout << vertSpcPadding << welcomeBorder << endl;
@@ -265,7 +264,7 @@ void howi() {
 		{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0 }
 	};
 	string output;
-	
+
 	for (int i = 0; i < 16; i++) {
 		if (i == 0) {
 			typeText("  master     ");
@@ -308,7 +307,7 @@ void howi() {
 		else {
 			typeText("                 \n");
 		}
-		
+
 	};
 
 	Sleep(1000);
