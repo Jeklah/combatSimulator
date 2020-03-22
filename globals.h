@@ -23,4 +23,4 @@ void typeText(string text)
 		Sleep(50);
 
 	}
-}
+};
